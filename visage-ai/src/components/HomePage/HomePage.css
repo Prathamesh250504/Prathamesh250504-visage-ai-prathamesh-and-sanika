@@ -1,0 +1,15 @@
+.homepage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(120deg, #fdf6e3 0%, #e0f7fa 100%);
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+/* Import other component-specific styles */
+@import './Navbar.css';
+@import './NavbarStreakPopup.css';
+@import './Hero.css';
+@import './Chatbot.css';
+@import './Footer.css';
+@import './Modals.css';

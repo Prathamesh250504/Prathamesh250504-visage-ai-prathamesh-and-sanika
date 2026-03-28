@@ -1,0 +1,266 @@
+export const products = [
+  // Sunscreens
+  {
+    id: '1',
+    name: 'UV Shield SPF 50+ Sunscreen',
+    brand: 'Neutrogena',
+    category: 'sunscreen',
+    price: 299,
+    originalPrice: 450,
+    rating: 4.5,
+    reviews: 2340,
+    image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400',
+    store: 'amazon',
+    link: 'https://amazon.in',
+    description: 'Broad spectrum protection with lightweight formula'
+  },
+  {
+    id: '2',
+    name: 'Aqua Rich Watery Essence SPF 50',
+    brand: 'Biore',
+    category: 'sunscreen',
+    price: 549,
+    originalPrice: 699,
+    rating: 4.7,
+    reviews: 5670,
+    image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400',
+    store: 'flipkart',
+    link: 'https://flipkart.com',
+    description: 'Weightless, watery texture that absorbs quickly'
+  },
+  {
+    id: '3',
+    name: 'Ultra Matte Dry Touch Sunscreen',
+    brand: 'La Shield',
+    category: 'sunscreen',
+    price: 199,
+    rating: 4.3,
+    reviews: 890,
+    image: 'https://m.media-amazon.com/images/I/51nJUgET1yL._SX679_.jpg',
+    store: 'amazon',
+    link: 'https://amazon.in',
+    description: 'Oil-free matte finish for oily skin'
+  },
+  // Moisturizers
+  {
+    id: '4',
+    name: 'Hydra Boost Gel Cream',
+    brand: 'Neutrogena',
+    category: 'moisturizer',
+    price: 399,
+    originalPrice: 550,
+    rating: 4.6,
+    reviews: 3450,
+    image: 'https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=400',
+    store: 'amazon',
+    link: 'https://amazon.in',
+    description: 'Hyaluronic acid gel for intense hydration'
+  },
+  {
+    id: '5',
+    name: 'Moisturizing Cream',
+    brand: 'Cetaphil',
+    category: 'moisturizer',
+    price: 289,
+    rating: 4.4,
+    reviews: 2100,
+    image: 'https://m.media-amazon.com/images/I/61kX0rdKztL._SX679_.jpg',
+    store: 'flipkart',
+    link: 'https://flipkart.com',
+    description: 'Gentle daily moisturizer for all skin types'
+  },
+  {
+    id: '6',
+    name: 'Ultra Repair Cream',
+    brand: 'First Aid Beauty',
+    category: 'moisturizer',
+    price: 149,
+    rating: 4.2,
+    reviews: 780,
+    image: 'https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=400',
+    store: 'amazon',
+    link: 'https://amazon.in',
+    description: 'Rich cream for dry and sensitive skin'
+  },
+  // Serums
+  {
+    id: '7',
+    name: 'Vitamin C 20% Serum',
+    brand: 'The Ordinary',
+    category: 'serum',
+    price: 699,
+    originalPrice: 899,
+    rating: 4.8,
+    reviews: 8900,
+    image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400',
+    store: 'amazon',
+    link: 'https://amazon.in',
+    description: 'Brightening serum with pure vitamin C'
+  },
+  {
+    id: '8',
+    name: 'Niacinamide 10% Serum',
+    brand: 'Minimalist',
+    category: 'serum',
+    price: 349,
+    rating: 4.5,
+    reviews: 4560,
+    image: 'https://images.unsplash.com/photo-1617897903246-719242758050?w=400',
+    store: 'flipkart',
+    link: 'https://flipkart.com',
+    description: 'Pore minimizing and oil control serum'
+  },
+  {
+    id: '9',
+    name: 'Hyaluronic Acid Serum',
+    brand: 'Plum',
+    category: 'serum',
+    price: 199,
+    rating: 4.3,
+    reviews: 1200,
+    image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400',
+    store: 'amazon',
+    link: 'https://amazon.in',
+    description: 'Deep hydration with 2% hyaluronic acid'
+  },
+  // Cleansers
+  {
+    id: '10',
+    name: 'Gentle Skin Cleanser',
+    brand: 'Cetaphil',
+    category: 'cleanser',
+    price: 299,
+    rating: 4.6,
+    reviews: 6780,
+    image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400',
+    store: 'amazon',
+    link: 'https://amazon.in',
+    description: 'Soap-free cleanser for sensitive skin'
+  },
+  {
+    id: '11',
+    name: 'Neem Foaming Face Wash',
+    brand: 'Himalaya',
+    category: 'cleanser',
+    price: 149,
+    rating: 4.2,
+    reviews: 3400,
+    image: 'https://himalayawellness.in/cdn/shop/products/purifying-neem-foaming-face-wash_529e9c06-9573-495c-97ee-3b1bdceb85bb_1800x1800.jpg?v=1622097339',
+    store: 'flipkart',
+    link: 'https://flipkart.com',
+    description: 'Neem and turmeric for clear skin'
+  },
+  {
+    id: '12',
+    name: 'Salicylic Acid Face Wash',
+    brand: 'Minimalist',
+    category: 'cleanser',
+    price: 99,
+    rating: 4.4,
+    reviews: 2100,
+    image: 'https://m.media-amazon.com/images/I/51n6kTG3zQL._SX679_.jpg',
+    store: 'amazon',
+    link: 'https://amazon.in',
+    description: '2% salicylic acid for acne-prone skin'
+  },
+  // Lip Balms
+  {
+    id: '13',
+    name: 'Petroleum Jelly Lip Therapy',
+    brand: 'Vaseline',
+    category: 'lipbalm',
+    price: 99,
+    rating: 4.5,
+    reviews: 5600,
+    image: 'https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=400',
+    store: 'amazon',
+    link: 'https://amazon.in',
+    description: 'Original healing formula for dry lips'
+  },
+  {
+    id: '14',
+    name: 'Beetroot Lip Balm',
+    brand: 'Nourish Mantra',
+    category: 'lipbalm',
+    price: 149,
+    rating: 4.3,
+    reviews: 1890,
+    image: 'https://nourishmantra.com/cdn/shop/products/Artboard1_1.jpg?v=1690274207',
+    store: 'flipkart',
+    link: 'https://flipkart.com',
+    description: 'Natural tint with moisturizing benefits'
+  },
+  {
+    id: '15',
+    name: 'SPF 15 Lip Care',
+    brand: 'Nivea',
+    category: 'lipbalm',
+    price: 79,
+    rating: 4.4,
+    reviews: 3200,
+    image: 'https://images.unsplash.com/photo-1599305090598-fe179d501227?w=400',
+    store: 'amazon',
+    link: 'https://amazon.in',
+    description: 'Sun protection with cherry flavor'
+  },
+  // Toners
+  {
+    id: '16',
+    name: 'Rose Water Toner',
+    brand: 'Kama Ayurveda',
+    category: 'toner',
+    price: 395,
+    originalPrice: 495,
+    rating: 4.6,
+    reviews: 2340,
+    image: 'https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=400',
+    store: 'amazon',
+    link: 'https://amazon.in',
+    description: 'Pure rose water for refreshed skin'
+  },
+  {
+    id: '17',
+    name: 'Glycolic Acid Toner',
+    brand: 'The Ordinary',
+    category: 'toner',
+    price: 499,
+    rating: 4.7,
+    reviews: 4100,
+    image: 'https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=400',
+    store: 'flipkart',
+    link: 'https://flipkart.com',
+    description: '7% glycolic acid for exfoliation'
+  },
+  {
+    id: '18',
+    name: 'Cucumber Toner',
+    brand: 'Biotique',
+    category: 'toner',
+    price: 129,
+    rating: 4.1,
+    reviews: 890,
+    image: 'https://images.unsplash.com/photo-1617897903246-719242758050?w=400',
+    store: 'amazon',
+    link: 'https://amazon.in',
+    description: 'Refreshing cucumber extract for pore tightening'
+  }
+];
+
+export const categories = [
+  { id: 'all', name: 'All Products', icon: '✨' },
+  { id: 'cleanser', name: 'Cleanser', icon: '🧴' },
+  { id: 'toner', name: 'Toner', icon: '💧' },
+  { id: 'serum', name: 'Serum', icon: '💎' },
+  { id: 'moisturizer', name: 'Moisturizer', icon: '🧈' },
+  { id: 'sunscreen', name: 'Sunscreen', icon: '☀️' },
+  { id: 'lipbalm', name: 'Lip Balm', icon: '💋' },
+];
+
+export const budgetOptions = [
+  { value: 300, label: 'Under ₹300' },
+  { value: 500, label: 'Under ₹500' },
+  { value: 800, label: 'Under ₹800' },
+  { value: 1000, label: 'Under ₹1000' },
+  { value: 1500, label: 'Under ₹1500' },
+];
+

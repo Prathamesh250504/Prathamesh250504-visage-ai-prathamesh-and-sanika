@@ -1,0 +1,310 @@
+.blogPage {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fdf6e3; /* Light cream background */
+  color: #333;
+}
+
+.header {
+  background-color: #fcebe3;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  margin: 0;
+  color: #c95d43;
+  font-size: 2.8rem;
+  font-weight: 650;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #8b4c3a;
+  margin-top: 0.5rem;
+}
+
+/* Back to Home Button */
+.backButtonWrapper {
+  display: flex;
+  justify-content: left;
+  margin-top: 1.5rem;
+}
+
+.backToHomeButton {
+  display: flex;
+  align-items: left;
+  gap: 8px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  border: 1px solid rgba(201, 93, 67, 0.2);
+  color: #4c4c4c;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Segoe UI', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.backToHomeButton:hover {
+  background: rgba(201, 93, 67, 0.1);
+  transform: translateX(-2px);
+  border-color: rgba(201, 93, 67, 0.3);
+}
+
+.backToHomeButton:active {
+  transform: translateX(0);
+}
+
+.backArrow {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.backToHomeButton:hover .backArrow {
+  transform: translateX(-2px);
+}
+
+.blogContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem; /* Consistent gap */
+  padding: 2rem; /* Consistent padding */
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 4rem; /* More space at the bottom */
+}
+
+.blogPost {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Adjusted shadow */
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #f0f0f0; /* Subtle border */
+}
+
+.blogPost:hover {
+  transform: translateY(-8px); /* More pronounced lift */
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15); /* Stronger shadow on hover */
+}
+
+.blogPost img {
+  width: 100%;
+  height: 220px; /* Slightly taller images */
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.blogContent {
+  padding: 1.8rem; /* Increased padding inside card */
+  flex-grow: 1;
+}
+
+.blogContent h2 {
+  margin-top: 0;
+  color: #a8523c; /* Darker heading color */
+  font-size: 1.6rem; /* Slightly larger heading */
+  margin-bottom: 0.8rem;
+}
+
+.blogContent p {
+  line-height: 1.7; /* Increased line height for readability */
+  color: #555; /* Softer text color */
+  font-size: 1.05rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fcebe3; /* Match header background */
+  color: #8b4c3a;
+  font-size: 1rem;
+}
+
+/* Modal */
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 1000; /* Ensure it's on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.6); /* Darker overlay */
+  backdrop-filter: blur(5px); /* Subtle blur effect */
+}
+
+.modalContent {
+  background-color: #fffaf5; /* Lighter cream background for modal */
+  padding: 3rem; /* More padding */
+  border-radius: 15px; /* More rounded corners */
+  max-width: 800px; /* Wider modal */
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3); /* Stronger, deeper shadow */
+  color: #4a3c31;
+  max-height: 90vh;
+  overflow-y: auto;
+  transform: scale(0.95); /* Initial slight scale */
+  animation: modalAppear 0.3s ease-out forwards; /* Animation for appearance */
+}
+
+@keyframes modalAppear {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 2.2rem; /* Larger close button */
+  color: #c95d43; /* Match header color */
+  transition: color 0.2s ease;
+}
+
+.close:hover {
+  color: #e27d5f; /* Lighter on hover */
+}
+
+.modalContent h1 {
+  color: #c95d43; /* Match header color */
+  font-size: 2.2rem; /* Larger title */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.modalContent img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 2rem; /* More space below image */
+  display: block; /* Ensure image takes full width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modalContent h3 {
+  margin-top: 1.8rem; /* More space above subheadings */
+  color: #a8523c; /* Match card heading color */
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.modalContent p {
+  line-height: 1.8; /* Increased line height for modal content */
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.modalContent strong {
+  color: #8b4c3a;
+}
+
+.modalContent ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding: 0;
+}
+
+.modalContent li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2.2rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .backToHomeButton {
+    font-size: 13px;
+    padding: 10px 18px;
+  }
+
+  .blogContainer {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .blogPost img {
+    height: 180px;
+  }
+
+  .blogContent h2 {
+    font-size: 1.4rem;
+  }
+
+  .blogContent p {
+    font-size: 0.95rem;
+  }
+
+  .modalContent {
+    margin: 5%;
+    padding: 2rem;
+  }
+
+  .modalContent h1 {
+    font-size: 1.8rem;
+  }
+
+  .modalContent img {
+    margin-bottom: 1.5rem;
+  }
+
+  .modalContent p,
+  .modalContent li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 2rem 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .backToHomeButton {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .blogContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .modalContent {
+    padding: 1.5rem;
+  }
+
+  .modalContent h1 {
+    font-size: 1.6rem;
+  }
+} 

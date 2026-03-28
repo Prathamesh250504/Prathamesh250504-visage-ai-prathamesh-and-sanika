@@ -1,0 +1,206 @@
+#chatToggleBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #f4b942; /* Soft Yellow */
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  box-shadow: 0 4px 15px rgba(244, 185, 66, 0.5);
+  border: none;
+  cursor: pointer;
+  font-size: 36px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pulse 2s infinite;
+  z-index: 1000;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 15px 3px rgba(244,185,66,0.5); }
+  50% { box-shadow: 0 0 20px 6px rgba(244,185,66,0.8); }
+}
+
+/* Chat container */
+.chatbot-container {
+  position: fixed;
+  bottom: 110px;
+  right: 20px;
+  width: 370px;
+  max-height: 550px;
+  background: #fff9ed; /* Soft peach background */
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(244, 185, 66, 0.4);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: scale(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+.chatbot-container.open {
+  transform: scale(1);
+}
+
+/* Header */
+.chat-header {
+  background: linear-gradient(90deg, #fff0c1, #f9db9b);
+  color: #4b3f2f;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  user-select: none;
+}
+.chat-header span {
+  font-size: 26px;
+  margin-left: 8px;
+}
+
+/* Chat box */
+.chat-box {
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
+  font-size: 14px;
+  line-height: 1.4;
+  background: #fff9f0; /* Light peach */
+}
+
+/* Messages */
+.chat-message {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.chat-message.bot {
+  justify-content: flex-start;
+}
+.chat-message.user {
+  justify-content: flex-end;
+}
+.chat-message .avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f4b942; /* Yellow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}
+.chat-message.bot .avatar {
+  background: #f8c978; /* Light orange */
+}
+.chat-message .text {
+  max-width: 70%;
+  padding: 8px 12px;
+  border-radius: 16px;
+  font-weight: 500;
+}
+.chat-message.bot .text {
+  background: #ffefd5; /* Light pastel */
+  color: #5c432c;
+  border-bottom-left-radius: 2px;
+}
+.chat-message.user .text {
+  background: #f4b942; /* Yellow */
+  color: white;
+  border-bottom-right-radius: 2px;
+}
+
+/* Typing animation */
+.typing {
+  font-style: italic;
+  color: #c28e4c;
+  padding-left: 40px;
+  font-weight: 600;
+  position: relative;
+}
+.typing::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background: #c28e4c;
+  border-radius: 50%;
+  animation: blink 1.4s infinite both;
+}
+.typing::after:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.typing::after:nth-child(3) {
+  animation-delay: 0.4s;
+}
+@keyframes blink {
+  0%, 80%, 100% { opacity: 0; }
+  40% { opacity: 1; }
+}
+
+/* Input area */
+.input-area {
+  display: flex;
+  border-top: 1px solid #f8e0b8;
+  padding: 10px;
+  background: #fff9f0;
+  align-items: center;
+}
+.input-area input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 30px;
+  border: 1.5px solid #f8e0b8;
+  outline: none;
+  font-size: 14px;
+}
+.input-area button, .input-area #micBtn {
+  background: #f4b942;
+  border: none;
+  color: white;
+  padding: 10px 14px;
+  margin-left: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(244, 185, 66, 0.4);
+  font-size: 20px;
+  transition: background 0.3s ease;
+}
+.input-area button:hover, .input-area #micBtn:hover {
+  background: #d89d22;
+}
+
+/* Scrollbar */
+.chat-box::-webkit-scrollbar {
+  width: 8px;
+}
+.chat-box::-webkit-scrollbar-thumb {
+  background: #f4b942;
+  border-radius: 20px;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(20px); }
+}
+@keyframes float2 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
