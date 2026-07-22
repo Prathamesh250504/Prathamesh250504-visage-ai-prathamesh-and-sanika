@@ -1,0 +1,14 @@
+[build]
+  base = ""
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "18"
+  CI = "false"
+
+# SPA redirect — all routes fall back to index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
